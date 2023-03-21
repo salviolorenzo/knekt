@@ -1,0 +1,13 @@
+{
+	"compilerOptions": {
+		"module": "CommonJS",
+		"target": "ES2019",
+		"noImplicitAny": true,
+		"preserveConstEnums": true,
+		"sourceMap": true,
+		"strict": true,
+		"noEmit": false
+	},
+	"include": ["./src/**/*"],
+	"exclude": ["node_modules", "**/*.spec.ts"]
+}
