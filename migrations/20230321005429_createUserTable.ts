@@ -10,8 +10,8 @@ export async function up(knex: Knex): Promise<void> {
 		table.string('email').notNullable();
 		table.integer('age').notNullable();
 		table.string('password').notNullable();
-		table.timestamp('createdAt').notNullable();
-		table.timestamp('updatedAt').notNullable();
+		table.timestamp('createdAt').notNullable().defaultTo(knex.fn.now());
+		table.timestamp('updatedAt').notNullable().defaultTo(knex.fn.now());
 	});
 }
 

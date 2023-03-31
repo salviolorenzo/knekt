@@ -1,5 +1,5 @@
 /** @format */
-import { UserDao } from '../dao/UserDao';
+import { UserDao } from '../repositories/UserDao';
 import { User, UserCreate, UserUpdate } from '../models/User';
 
 const userDao = new UserDao();

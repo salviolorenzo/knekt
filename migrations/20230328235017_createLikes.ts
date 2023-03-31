@@ -7,8 +7,8 @@ export async function up(knex: Knex): Promise<void> {
 		table.increments('id').notNullable();
 		table.integer('userId').unsigned().notNullable();
 		table.integer('postId').unsigned().notNullable();
-		table.timestamp('createdAt').notNullable();
-		table.timestamp('updatedAt').notNullable();
+		table.timestamp('createdAt').notNullable().defaultTo(knex.fn.now());
+		table.timestamp('updatedAt').notNullable().defaultTo(knex.fn.now());
 		table.foreign('userId').references('id').inTable('users');
 		table.foreign('postId').references('id').inTable('posts');
 	});
